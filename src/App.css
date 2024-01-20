@@ -1,38 +1,459 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 450vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  align-self: flex-start;
+  transition: background 2s linear; /* Smooth transition effect */
+  opacity: 0; /* Set initial opacity to 0 */
+  animation: fadeIn 2s ease forwards;
+}
+.intro {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #3498db;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  transition: background 2s linear;
+  margin-top: 35vh;
+  
+  
+}
+
+.intro p,
+.intro h1,
+.intro p {
+  
+  margin: 0;
+}
+
+.intro h1 {
+  font-size: 70px;
+  display: block;
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+.intro p {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.deadspace1{
+  height:10vh;
+  
+}
+
+.deadspace2{
+  height:10vh;
+}
+
+.aboutText h1{
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.aboutText h2{
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.aboutText h3{
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px #ff073a;
+}
+
+.about{
+  min-height: 150vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #3498db;
+  padding: 20px;
+  color: #fff;
+  transition: background 2s linear;
+  width: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.notAbout{
+  min-height: 150vh;
+  height:auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #3498db;
+  padding: 20px;
+  color: #fff;
+  transition: background 2s linear;
+  width: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+  
+}
+
+
+.aboutHeader{
+  text-align: center;
+}
+
+.abouth2 {
+  opacity: 1;
+  transition: opacity 4s ease;
+  font-weight: 300;
+  align-items: center;
+}
+
+.hideabouth2 {
+  transition: opacity 4s ease; 
+  opacity: 0;
+  font-weight: 300;
+}
+
+.side-by-side{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aboutPhoto {
+  opacity: 1;
+  transition: opacity 4s ease; 
+  flex: 1;
+  margin: 5px;
+  min-width: 40%;
+  width: auto;
+  position: relative;
+  overflow: hidden;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display:flex;
+  align-items:center;
+  padding-bottom: 40%;
+  width: calc(100% - 10px);
 }
 
-.App-link {
-  color: #61dafb;
+.notAboutPhoto{
+  opacity: 0;
+  transition: opacity 4s ease; 
+  flex: 1;
+  margin: 5px;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  padding-bottom: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.aboutPhoto,
+.notAboutPhoto,
+.aboutText,
+.notAboutText {
+  flex: 1;
+  margin: 5px;
+}
+
+
+.aboutText{
+  font-family: 'Open Sans', sans-serif;
+  
+  flex: 1;
+  margin: 5px;
+  width: 40%;
+  align-items:flex-start;
+  transition: opacity 4s ease; 
+  width: calc(100%-10px);
+}
+
+.notAboutText{
+  font-family: 'Open Sans', sans-serif;
+  transition: opacity 4s ease; 
+  opacity: 0;
+  flex: 1;
+  margin: 5px;
+  width: 40%;
+  align-items:flex-start;
+}
+
+.empty{
+  margin-bottom: 10px;
+}
+
+.ParthWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+  transition: background 2s linear;
+  opacity: 1;
+}
+.notParthWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+  transition: background 2s linear;
+  opacity: 0;
+}
+
+.Parth{
+  width: auto;
+  max-width:80%;
+  height: auto;
+  max-height:80%;
+  object-fit: contain;
+  display: block;
+  border-radius: 80%;
+  opacity: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 20px 10px rgba(64, 64, 64, 0.5);
+}
+
+.notParth{
+  width: auto;
+  max-width:80%;
+  height: auto;
+  max-height:80%;
+  object-fit: contain;
+  display: block;
+  border-radius: 80%;
+  opacity: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 0px 20px 10px rgba(64, 64, 64, 0.5);
+  
+}
+
+
+
+
+
+.project {
+  opacity: 1;
+  min-height: 150vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
+  transition: background 2s linear;
+  width: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+  max-height:100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.notProject {
+  font-family: 'Open Sans', sans-serif;
+  max-height:100%;
+
+  opacity: 0;
+  min-height: 150vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #fff;
+  transition: background 2s linear;
+  width: 80%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.projectHeader {
+  text-align: center;
+}
+
+.projh2 {
+  opacity: 1;
+  transition: opacity 4s ease;
+  font-weight: 300;
+  align-items: center;
+}
+
+.projDesc{
+  text-align: center;
+}
+
+.hideprojh2 {
+  opacity: 0;
+  transition: opacity 4s ease;
+  opacity: 0;
+  font-weight: 300;
+}
+
+.projImg{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.pdfMergerA{
+  max-width: 94% !important;
+  max-height: 94% !important;
+  margin: 10px !important; 
+}
+
+
+
+/* Add this style for the images to make them display side by side */
+.project a, .notProject a {
+  width: auto;
+  max-width: 46%;
+  height: auto;
+  max-height: 46%;
+  margin: 10px; /* Add some margin between the images */
+}
+
+.project img, .notProject img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  border-radius: 5%;
+  margin: 20px; /* Add some margin between the images */
+  transition: transform 0.2s ease-in-out;
+}
+
+.project img:hover,
+.notProject img:hover {
+  transform: scale(1.05); /* Increase the size on hover */
+}
+
+
+@media (max-width: 1500px){
+  .app{
+    height: 400vh;
   }
+  .about{
+    height: 155;
+  }
+  
+}
+
+
+@media (max-width: 1000px) {
+  .app{
+    height: 500vh;
+  }
+  .projImg{
+    min-height: 150vh;
+    flex-direction: column;
+  }
+
+  .projImg a{
+    max-width:94%;
+    width: auto;
+    max-height: 94%;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .side-by-side{
+
+    flex-direction: column;
+  }
+  .intro {
+    position: static; /* or relative, depending on your layout needs */
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%; /* Make it full width on smaller screens */
+    transition: background 2s linear;
+  }
+
+    .aboutPhoto {
+      flex: 1;
+
+      margin: 5px;
+      width: 100%;
+      
+      
+    }
+    
+    .aboutText{
+      flex: 1;
+
+      margin: 5px;
+      width: 100%;
+      align-items:flex-start;
+      
+    }
+  
+}
+
+@media (max-width: 600px) {
+  .projImg{
+    flex-direction: column;
+  }
+
+  .side-by-side{
+
+    flex-direction: column;
+  }
+  .intro {
+    position: static; /* or relative, depending on your layout needs */
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%; /* Make it full width on smaller screens */
+    transition: background 2s linear;
+  }
+
+    .aboutPhoto {
+      flex: 1;
+
+      margin: 5px;
+      width: 100%;
+      
+      
+    }
+    
+    .aboutText{
+      flex: 1;
+
+      margin: 5px;
+      width: 100%;
+      align-items:flex-start;
+      
+    }
+  
+}
+
+
+
+
+@keyframes fadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1; /* Set opacity to 1 at the end of the animation */
   }
 }
+
