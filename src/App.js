@@ -137,6 +137,10 @@ const App = () => {
       <a href="https://github.com/parth6646/trackflightbot" target="_blank" rel="noreferrer">
       <img className="FlightTracker" src={"FlightTracker.png"} alt="source"></img>
       </a>
+
+      <a href="https://github.com/PACK-Hacks/Chordinator.AI" target="_blank" rel="noreferrer">
+      <img className="Chordinator" src={"Chordinator.png"} alt="source"></img>
+      </a>
       
       
       </div>
